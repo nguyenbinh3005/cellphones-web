@@ -1,5 +1,4 @@
 import * as actionTypes from '../constants/productConstants';
-// import axios from 'axios';
 import * as api from '../../api/index';
 
 export const getProducts = () => async (dispatch) => {
@@ -41,7 +40,3 @@ export const getProductDetails = (title) => async (dispatch) => {
     });
   }
 };
-
-// export const removeProductDetails = () => (dispatch) => {
-//   dispatch({ type: actionTypes.GET_PRODUCT_DETAILS_RESET });
-// };

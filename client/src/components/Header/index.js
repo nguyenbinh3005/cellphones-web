@@ -1,6 +1,8 @@
 import React from 'react';
 import useStyles from './styles';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+
 import { IconButton, InputBase, Paper, Typography } from '@mui/material';
 import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
 import Badge from '@mui/material/Badge';
@@ -13,6 +15,8 @@ import logo from '../../images/logo.png';
 
 export default function Header() {
   const classes = useStyles();
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
   return (
     <div>
       <Typography variant="h6" align="center" className={classes.banner}>
@@ -57,7 +61,7 @@ export default function Header() {
             <div>Tìm cửa hàng</div>
           </div>
           <Link to="/checkout/cart" className={classes.cart}>
-            <Badge badgeContent={1} color="error">
+            <Badge badgeContent={cartItems.length} color="error">
               <LocalMallIcon className={classes.iconCart} />
             </Badge>
             <div>Giỏ hàng</div>
