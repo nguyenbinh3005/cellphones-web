@@ -1,37 +1,56 @@
 import React from 'react';
 import useStyles from './styles';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
+import { useSelector, useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+
+// import { addToCart } from '../../redux/actions/cartActions';
+import { removeFromCart } from '../../redux/actions/cartActions';
 
 export default function CartScreen() {
   const classes = useStyles();
+  const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
+
+  const onIncreaseProduct = () => {
+    // dispatch(addToCart(product.title, 1));
+  };
+
+  const onRemoveFromCart = (title) => {
+    dispatch(removeFromCart(title));
+  };
   return (
     <div>
-      <div className={classes.cartItem}>
-        <img
-          src="https://cdn.cellphones.com.vn/media/catalog/product/cache/7/thumbnail/300x/9df78eab33525d08d6e5fb8d27136e95/s/a/samsung-galaxy-s21-ultra-1.jpg"
-          alt=""
-          className={classes.left}
-        ></img>
-        <div className={classes.right}>
-          <span style={{ fontWeight: 'bold', fontFamily: 'arial' }}>
-            Samsung Galaxy S21 Ultra
-          </span>
-          <span style={{ color: '#e11b1e' }}>24.900.000 VND</span>
-          <div className={classes.actions}>
-            <button className={classes.count}>-</button>
-            <span className={classes.amount}>1</span>
-            <button className={classes.count}>+</button>
-            <DeleteForeverIcon
-              color="error"
-              style={{
-                fontSize: '30px',
-                marginLeft: '20px',
-                cursor: 'pointer',
-              }}
-            />
+      {cartItems.map((item) => (
+        <div className={classes.cartItem} key={item._id}>
+          <Link to={`/${item.title}`}>
+            <img src={item.image} alt="" className={classes.left}></img>
+          </Link>
+          <div className={classes.right}>
+            <span style={{ fontWeight: 'bold', fontFamily: 'arial' }}>
+              {item.name}
+            </span>
+            <span style={{ color: '#e11b1e' }}>{item.price}</span>
+            <div className={classes.actions}>
+              <button className={classes.count} onClick={onIncreaseProduct}>
+                -
+              </button>
+              <span className={classes.amount}>{item.quantity}</span>
+              <button className={classes.count}>+</button>
+              <DeleteForeverIcon
+                color="error"
+                style={{
+                  fontSize: '30px',
+                  marginLeft: '20px',
+                  cursor: 'pointer',
+                }}
+                onClick={() => onRemoveFromCart(item.title)}
+              />
+            </div>
           </div>
         </div>
-      </div>
+      ))}
     </div>
   );
 }

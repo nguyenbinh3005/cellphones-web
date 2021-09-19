@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import useStyles from './styles';
-import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { CircularProgress } from '@mui/material';
 
 import { getProductDetails } from '../../redux/actions/productActions';
+import { addToCart } from '../../redux/actions/cartActions';
 
 export default function ProductScreen({ match }) {
   const classes = useStyles();
@@ -19,6 +19,9 @@ export default function ProductScreen({ match }) {
     }
   }, [dispatch, match, product]);
 
+  const onAddtoCart = () => {
+    dispatch(addToCart(product.title, 1));
+  };
   return (
     <div>
       {loading ? (
@@ -35,7 +38,11 @@ export default function ProductScreen({ match }) {
               <img className={classes.imgProduct} src={product.image} alt="" />
               <div className={classes.inforProduct}>
                 <span className={classes.priceProduct}>{product.price}</span>
-                <Link to="/checkout/cart" className={classes.addCart}>
+                <Link
+                  to="/checkout/cart"
+                  className={classes.addCart}
+                  onClick={onAddtoCart}
+                >
                   <span className={classes.titleAddCart1}>MUA NGAY</span>
                   <span className={classes.titleAddCart2}>
                     (Giao nhanh tận nhà)
