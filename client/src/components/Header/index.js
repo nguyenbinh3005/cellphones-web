@@ -17,6 +17,12 @@ export default function Header() {
   const classes = useStyles();
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
+  const getCartCount = () => {
+    return cartItems.reduce(
+      (quantity, item) => Number(item.quantity) + quantity,
+      0
+    );
+  };
   return (
     <div>
       <Typography variant="h6" align="center" className={classes.banner}>
@@ -61,7 +67,7 @@ export default function Header() {
             <div>Tìm cửa hàng</div>
           </div>
           <Link to="/checkout/cart" className={classes.cart}>
-            <Badge badgeContent={cartItems.length} color="error">
+            <Badge badgeContent={getCartCount()} color="error">
               <LocalMallIcon className={classes.iconCart} />
             </Badge>
             <div>Giỏ hàng</div>

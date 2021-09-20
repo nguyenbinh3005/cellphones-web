@@ -20,7 +20,7 @@ export default function ProductScreen({ match }) {
   }, [dispatch, match, product]);
 
   const onAddtoCart = () => {
-    dispatch(addToCart(product.title, 1));
+    dispatch(addToCart(product.title));
   };
   return (
     <div>

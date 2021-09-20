@@ -4,7 +4,7 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-// import { addToCart } from '../../redux/actions/cartActions';
+import { updateToCart } from '../../redux/actions/cartActions';
 import { removeFromCart } from '../../redux/actions/cartActions';
 
 export default function CartScreen() {
@@ -13,8 +13,12 @@ export default function CartScreen() {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
 
-  const onIncreaseProduct = () => {
-    // dispatch(addToCart(product.title, 1));
+  const onIncreaseProduct = (title, quantity) => {
+    dispatch(updateToCart(title, quantity + 1));
+  };
+
+  const onDecreaseProduct = (title, quantity) => {
+    dispatch(updateToCart(title, quantity > 1 ? quantity - 1 : quantity));
   };
 
   const onRemoveFromCart = (title) => {
@@ -33,11 +37,19 @@ export default function CartScreen() {
             </span>
             <span style={{ color: '#e11b1e' }}>{item.price}</span>
             <div className={classes.actions}>
-              <button className={classes.count} onClick={onIncreaseProduct}>
+              <button
+                className={classes.count}
+                onClick={() => onDecreaseProduct(item.title, item.quantity)}
+              >
                 -
               </button>
               <span className={classes.amount}>{item.quantity}</span>
-              <button className={classes.count}>+</button>
+              <button
+                className={classes.count}
+                onClick={() => onIncreaseProduct(item.title, item.quantity)}
+              >
+                +
+              </button>
               <DeleteForeverIcon
                 color="error"
                 style={{
