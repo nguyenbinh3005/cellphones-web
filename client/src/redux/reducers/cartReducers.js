@@ -7,10 +7,6 @@ const CART_INITIAL_STATE = {
 export const cartReducer = (state = CART_INITIAL_STATE, action) => {
   switch (action.type) {
     case actionTypes.ADD_TO_CART:
-      // return {
-      //   ...state,
-      //   cartItems: [...state.cartItems, action.payload],
-      // };
       const item = action.payload;
 
       const existItem = state.cartItems.find((x) => x.title === item.title);
