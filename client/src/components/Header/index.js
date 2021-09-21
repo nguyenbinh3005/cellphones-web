@@ -31,7 +31,7 @@ export default function Header() {
       <div className={classes.container}>
         <div className={classes.toolgroup}>
           <div className={classes.toolgroup1}>
-            <MenuOutlinedIcon className={classes.menu} />
+            <MenuOutlinedIcon style={{ fontSize: '37px', marginTop: '2px' }} />
             <Link to="/" className={classes.namebranch}>
               <div className={classes.namepage}>cellphone</div>
               <img src={logo} alt="" className={classes.logo} />

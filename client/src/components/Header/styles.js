@@ -12,20 +12,16 @@ export default makeStyles((theme) => ({
     backgroundColor: '#d70018',
   },
   toolgroup: {
-    backgroundColor: '#d70018',
     color: 'white',
     height: '65px',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    margin: '0 150px',
+    width: '1200px',
+    margin: '0 auto',
   },
   toolgroup1: {
     display: 'flex',
-  },
-  menu: {
-    height: '35px',
-    width: '35px',
   },
   namebranch: {
     display: 'flex',
@@ -44,7 +40,7 @@ export default makeStyles((theme) => ({
   },
   dropdown: {
     height: '38px',
-    width: '110px',
+    width: '100px',
     fontSize: '12px',
     marginTop: '8px',
   },
