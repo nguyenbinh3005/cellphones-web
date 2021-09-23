@@ -24,7 +24,7 @@ export default function Header() {
     );
   };
   return (
-    <div>
+    <div className={classes.header}>
       <Typography variant="h6" align="center" className={classes.banner}>
         Giao hàng nhanh 1h (xem chi tiết)
       </Typography>

@@ -5,7 +5,6 @@ export default makeStyles((theme) => ({
     height: '390px',
     width: '1200px',
     display: 'flex',
-    marginTop: '15px',
   },
   boxSlidingLeft: {
     backgroundColor: 'white',

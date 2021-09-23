@@ -1,6 +1,10 @@
 import { makeStyles } from '@mui/styles';
 
 export default makeStyles((theme) => ({
+  cartScreen: {
+    marginTop: '95px',
+    backgroundColor: 'white',
+  },
   cartItem: {
     height: '180px',
     width: '600px',

@@ -1,6 +1,10 @@
 import { makeStyles } from '@mui/styles';
 
 export default makeStyles((theme) => ({
+  productScreen: {
+    marginTop: '95px',
+    backgroundColor: 'white',
+  },
   body: {
     display: 'flex',
     justifyContent: 'center',

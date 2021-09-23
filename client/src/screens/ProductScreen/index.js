@@ -23,7 +23,7 @@ export default function ProductScreen({ match }) {
     dispatch(addToCart(product.title));
   };
   return (
-    <div>
+    <div className={classes.productScreen}>
       {loading ? (
         <CircularProgress />
       ) : error ? (
@@ -53,7 +53,6 @@ export default function ProductScreen({ match }) {
             <div className={classes.right}>MORE INFORMATION</div>
           </div>
         </>
-        // <div>product</div>
       )}
     </div>
   );

@@ -25,7 +25,7 @@ export default function CartScreen() {
     dispatch(removeFromCart(title));
   };
   return (
-    <div>
+    <div className={classes.cartScreen}>
       {cartItems.length ? (
         cartItems.map((item) => (
           <div className={classes.cartItem} key={item._id}>

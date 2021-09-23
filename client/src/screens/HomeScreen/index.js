@@ -7,7 +7,7 @@ import ListProduct from '../../components/ListProduct';
 export default function HomeScreen() {
   const classes = useStyles();
   return (
-    <div>
+    <div className={classes.homeScreen}>
       <div className={classes.body}>
         <BoxSliding />
       </div>

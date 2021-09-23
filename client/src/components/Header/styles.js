@@ -1,6 +1,10 @@
 import { makeStyles } from '@mui/styles';
 
 export default makeStyles((theme) => ({
+  header: {
+    position: 'fixed',
+    width: '100%',
+  },
   banner: {
     height: '30px',
     backgroundColor: '#444444',

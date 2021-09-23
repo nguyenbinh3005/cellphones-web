@@ -1,12 +1,9 @@
 import { makeStyles } from '@mui/styles';
 
 export default makeStyles((theme) => ({
-  homeScreen: {
-    marginTop: '110px',
-  },
-  body: {
+  homePage: {
     display: 'flex',
-    justifyContent: 'center',
-    height: '100%',
+    flexDirection: 'column',
+    backgroundColor: 'rgb(230,255,255)',
   },
 }));
