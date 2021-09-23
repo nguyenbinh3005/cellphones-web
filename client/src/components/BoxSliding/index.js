@@ -25,7 +25,7 @@ export default function BoxSliding() {
   return (
     <div>
       <div className={classes.boxSliding}>
-        <div className={classes.boxSlidingLeft}>
+        <div className={classes.boxSlidingLeft1}>
           <ul
             style={{
               listStyleType: 'none',
@@ -142,7 +142,129 @@ export default function BoxSliding() {
             </li>
           </ul>
         </div>
-        <div className={classes.boxSlidingCenter}>
+        <div className={classes.boxSlidingLeft2}>
+          <ul
+            style={{
+              listStyleType: 'none',
+              margin: '0px',
+            }}
+          >
+            <li className={classes.menuItem}>
+              <div className={classes.everyItem}>
+                <div className={classes.everyItemLeft}>
+                  <span className={classes.nameItem}>Apple</span>
+                </div>
+                <ChevronRightIcon style={{ fontSize: '15px' }} />
+              </div>
+            </li>
+            <li className={classes.menuItem}>
+              <div className={classes.everyItem}>
+                <div className={classes.everyItemLeft}>
+                  <span className={classes.nameItem}>Samsung</span>
+                </div>
+                <ChevronRightIcon style={{ fontSize: '15px' }} />
+              </div>
+            </li>
+            <li className={classes.menuItem}>
+              <div className={classes.everyItem}>
+                <div className={classes.everyItemLeft}>
+                  <span className={classes.nameItem}>Xiaomi</span>
+                </div>
+                <ChevronRightIcon style={{ fontSize: '15px' }} />
+              </div>
+            </li>
+            <li className={classes.menuItem}>
+              <div className={classes.everyItem}>
+                <div className={classes.everyItemLeft}>
+                  <span className={classes.nameItem}>Oppo</span>
+                </div>
+                <ChevronRightIcon style={{ fontSize: '15px' }} />
+              </div>
+            </li>
+            <li className={classes.menuItem}>
+              <div className={classes.everyItem}>
+                <div className={classes.everyItemLeft}>
+                  <span className={classes.nameItem}>Nokia</span>
+                </div>
+                <ChevronRightIcon style={{ fontSize: '15px' }} />
+              </div>
+            </li>
+            <li className={classes.menuItem}>
+              <div className={classes.everyItem}>
+                <div className={classes.everyItemLeft}>
+                  <span className={classes.nameItem}>Realme</span>
+                </div>
+                <ChevronRightIcon style={{ fontSize: '15px' }} />
+              </div>
+            </li>
+            <li className={classes.menuItem}>
+              <div className={classes.everyItem}>
+                <div className={classes.everyItemLeft}>
+                  <span className={classes.nameItem}>Vsmart</span>
+                </div>
+                <ChevronRightIcon style={{ fontSize: '15px' }} />
+              </div>
+            </li>
+            <li className={classes.menuItem}>
+              <div className={classes.everyItem}>
+                <div className={classes.everyItemLeft}>
+                  <span className={classes.nameItem}>ASUS</span>
+                </div>
+                <ChevronRightIcon style={{ fontSize: '15px' }} />
+              </div>
+            </li>
+            <li className={classes.menuItem}>
+              <div className={classes.everyItem}>
+                <div className={classes.everyItemLeft}>
+                  <span className={classes.nameItem}>Vivo</span>
+                </div>
+                <ChevronRightIcon style={{ fontSize: '15px' }} />
+              </div>
+            </li>
+            <li className={classes.menuItem}>
+              <div className={classes.everyItem}>
+                <div className={classes.everyItemLeft}>
+                  <span className={classes.nameItem}>OnePlus</span>
+                </div>
+                <ChevronRightIcon style={{ fontSize: '15px' }} />
+              </div>
+            </li>
+            <li className={classes.menuItem}>
+              <div className={classes.everyItem}>
+                <div className={classes.everyItemLeft}>
+                  <span className={classes.nameItem}>POCO</span>
+                </div>
+                <ChevronRightIcon style={{ fontSize: '15px' }} />
+              </div>
+            </li>
+            <li className={classes.menuItem}>
+              <div className={classes.everyItem}>
+                <div className={classes.everyItemLeft}>
+                  <span className={classes.nameItem}>Nubia</span>
+                </div>
+                <ChevronRightIcon style={{ fontSize: '15px' }} />
+              </div>
+            </li>
+            <li className={classes.menuItem}>
+              <div className={classes.everyItem}>
+                <div className={classes.everyItemLeft}>
+                  <span className={classes.nameItem}>Điện thoại phổ thông</span>
+                </div>
+                <ChevronRightIcon style={{ fontSize: '15px' }} />
+              </div>
+            </li>
+            <li className={classes.menuItem}>
+              <div className={classes.everyItem}>
+                <div className={classes.everyItemLeft}>
+                  <span className={classes.nameItem}>Tin đồn - M</span>
+                </div>
+                <ChevronRightIcon style={{ fontSize: '15px' }} />
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        {/* <div className={classes.boxSlidingCenter}>
           <img src={poster1} alt="" width="700px" height="305px"></img>
           <div className={classes.namePosterGroup}>
             <div className={classes.namePoster}>
@@ -178,7 +300,7 @@ export default function BoxSliding() {
           <img src={posterRight1} alt="" width="265px" />
           <img src={posterRight2} alt="" width="265px" />
           <img src={posterRight3} alt="" width="265px" />
-        </div>
+        </div> */}
       </div>
       <img src={posterCenter} alt="" />
     </div>

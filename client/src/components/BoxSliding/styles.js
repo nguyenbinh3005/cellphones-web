@@ -6,12 +6,20 @@ export default makeStyles((theme) => ({
     width: '1200px',
     display: 'flex',
   },
-  boxSlidingLeft: {
-    backgroundColor: 'white',
+  boxSlidingLeft1: {
     width: '200px',
-    height: '380px',
+    '&:hover + $boxSlidingLeft2': {
+      visibility: 'visible',
+    },
+  },
+  boxSlidingLeft2: {
+    width: '200px',
+    visibility: 'hidden',
+    zIndex: '2',
+    display: 'fixed',
   },
   menuItem: {
+    backgroundColor: 'white',
     paddingTop: '5px',
     textAlign: 'center',
     marginLeft: '-40px',
